@@ -79,11 +79,11 @@ ASCIIDOC_FLAGS = $(V) $(VERS) $(GITVERS) $(IMPDIR)
 
 A2X_FLAGS = $(K) $(ASCIIDOC_FLAGS)
 
-.PHONY: deck help
+.PHONY: blog help
 
 help:
 	@echo "Please use 'make <target>' where <target> is one of"
-	@echo "  deck     to generate a deck"
+	@echo "  blog     to generate a blog post"
 	@echo "For verbose output, use 'VERBOSE=1'".
 	@echo "To keep temporary files, use 'KEEP=1'".
 	@echo "To set the version, use 'VERSION=[the version]'".
