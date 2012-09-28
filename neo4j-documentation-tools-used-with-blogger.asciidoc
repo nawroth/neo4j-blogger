@@ -1,0 +1,41 @@
+== Neo4j Documentation tools used with Blogger ==
+
+This blog post is an experiment, to see if I can use the Neo4j documentation tools to produce a blog post.
+At the core of the documentation tools is AsciiDoc, which means this post is written using AsciiDoc syntax.
+The tools produce a HTML file, which I then have copy-pasted into the HTML editor in Blogger.
+
+Here's the projects used to produce the blog post:
+
+* http://srackham.wordpress.com/2012/09/11/blogger-backend-for-asciidoc/[Blogger backend for AsciiDoc].
+* https://github.com/neo4j/doctools[Neo4j Documentation tools], used to produce the http://docs.neo4j.org/chunked/milestone/[Neo4j manual].
+
+The blog post itself with configuration is found here:
+
+* https://github.com/nawroth/neo4j-blogger
+
+[NOTE]
+The _neo4j-blogger_ project lets Maven download the tools needed.
+You still need Python installed though.
+Maybe some other tools as well, I'm not sure.
+
+How to use:
+
+* First run: `mvn clean package`
+* Subsequent runs: `make blog`
+* The blog entry is read from 'blogentry.asciidoc'.
+* The resulting blog post is written to 'target/blog.html'.
+* Copy & paste the contents from 'target/blog.html' into the HTML editor of Blogger.
+
+== A Heading ==
+
+TIP: This is actually quite easy to get working.
+
+Lets include an image of a database:
+
+image::cypher-multirelationalsocialnetwork-graph.txt.svg[]
+
+== Future ==
+
+With some work, the extra features the Neo4j documentation uses on top of
+AsciiDoc could be updated to work with the Blogger backend as well.
+
